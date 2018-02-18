@@ -30,18 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ApiManager apiManager = new ApiManager(Volley.newRequestQueue(this));
-        apiManager.getGeoIpInfo(new Response.Listener<GeoIpResponseModel>() {
-            @Override
-            public void onResponse(GeoIpResponseModel response) {
-                Log.d(TAG, String.valueOf(response==null));
-                binding.setResponse(response);
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        apiManager.getGeoIpInfo(binding::setResponse, error -> Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show());
 
     }
 
