@@ -1,9 +1,11 @@
-### Welcome to GeoIp-android [![](https://jitpack.io/v/seventhmoon/GeoIp-android.svg)](https://jitpack.io/#seventhmoon/GeoIp-android)
+### Welcome to IP API for Volley 
+[![](https://jitpack.io/v/seventhmoon/ipapi-volley.svg)](https://jitpack.io/#seventhmoon/ipapi-volley)
+
 This is a wrapper of [IP-API](http://ip-api.com/json) for Android platform using Volley.
 In simple words, get your location information by IP address.
 
 ### Sample Application
-Sample Application is included in [app](https://github.com/seventhmoon/GeoIp-android/tree/master/app)
+Sample Application is included in [app](https://github.com/seventhmoon/ipapi-volley/tree/master/app)
 
 ### How to install
 
@@ -23,7 +25,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.seventhmoon:GeoIp-android:1.0.0'
+	        compile 'com.github.seventhmoon:ipapi-volley:v1.0'
 	}
 	
 ### How to use
