@@ -1,24 +1,18 @@
 package com.androidfung.geoip.api;
 
-import android.content.Context;
-import android.graphics.Point;
-import android.os.Build;
-import android.provider.Settings;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.androidfung.geoip.model.GeoIpResponseModel;
-import com.androidfung.geoip.network.GsonObjectRequest;
+import com.androidfung.geoip.model.IpApiResponseModel;
+import com.androidfung.volley.toolbox.GsonObjectRequest;
 
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Map;
-import java.util.TreeMap;
 
 /**
- * Created by seventhmoon on 04/12/2014.
+ * Created by Fung LAM on 04/12/2014.
  */
 public class ApiManager {
 
@@ -31,10 +25,10 @@ public class ApiManager {
         mRequestQueue = requestQueue;
     }
 
-    public void getGeoIpInfo(Response.Listener<GeoIpResponseModel> listener, Response.ErrorListener errorListener){
+    public void getGeoIpInfo(Response.Listener<IpApiResponseModel> listener, Response.ErrorListener errorListener){
 
         GsonObjectRequest gsonReq = new GsonObjectRequest(Request.Method.GET, ENDPOINT
-                , GeoIpResponseModel.class, null, listener, errorListener);
+                , IpApiResponseModel.class, null, listener, errorListener);
         mRequestQueue.add(gsonReq);
     }
 

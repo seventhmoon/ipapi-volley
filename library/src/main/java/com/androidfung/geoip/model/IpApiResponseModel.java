@@ -3,9 +3,9 @@ package com.androidfung.geoip.model;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by fung.lam on 17/11/2015.
+ * Created by Fung LAM on 17/11/2015.
  */
-public class GeoIpResponseModel {
+public class IpApiResponseModel {
 
     public enum Status{
         @SerializedName("success")
