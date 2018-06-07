@@ -6,7 +6,7 @@
     <data>
         <variable
             name="response"
-            type="com.androidfung.geoip.model.GeoIpResponseModel" />
+            type="com.androidfung.geoip.model.IpApiResponseModel" />
     </data>
 
     <RelativeLayout
