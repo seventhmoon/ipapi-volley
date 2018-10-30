@@ -1,9 +1,6 @@
 package com.androidfung.geoip;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.android.volley.VolleyError;
@@ -11,6 +8,9 @@ import com.android.volley.toolbox.Volley;
 import com.androidfung.geoip.api.ApiManager;
 import com.androidfung.geoip.databinding.ActivityMainBinding;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.databinding.DataBindingUtil;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void showError(VolleyError error){
+    private void showError(VolleyError error) {
         Toast.makeText(this, error.toString(), Toast.LENGTH_SHORT).show();
     }
 }
