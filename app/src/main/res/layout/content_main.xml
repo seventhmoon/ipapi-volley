@@ -54,7 +54,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@{response.query}"
+                            android:text="@{response.ip}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                         <Space
@@ -87,7 +87,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@{response.regionName}"
+                            android:text="@{response.region}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                         <Space
@@ -152,7 +152,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@{response.as}"
+                            android:text="@{response.asn}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                         <Space
@@ -168,7 +168,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@{response.isp}"
+                            android:text="@{response.org}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                         <Space
@@ -192,9 +192,7 @@
 
             </androidx.gridlayout.widget.GridLayout>
 
-
         </androidx.core.widget.NestedScrollView>
-
 
     </RelativeLayout>
 </layout>

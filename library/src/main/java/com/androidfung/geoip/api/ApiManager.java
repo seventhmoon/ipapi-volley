@@ -9,6 +9,7 @@ import com.androidfung.volley.*;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -18,7 +19,8 @@ public class ApiManager {
 
     private static final String TAG = ApiManager.class.getSimpleName();
 
-    private static final String ENDPOINT = "http://ip-api.com/json";
+//    private static final String ENDPOINT = "http://ip-api.com/json";
+    private static final String ENDPOINT = "https://ipapi.co/json";
     private RequestQueue mRequestQueue;
 
     public ApiManager(RequestQueue requestQueue) {
@@ -28,7 +30,15 @@ public class ApiManager {
     public void getGeoIpInfo(Response.Listener<IpApiResponseModel> listener, Response.ErrorListener errorListener){
 
         GsonObjectRequest gsonReq = new GsonObjectRequest(Request.Method.GET, ENDPOINT
-                , IpApiResponseModel.class, null, listener, errorListener);
+                , IpApiResponseModel.class, null, listener, errorListener){
+            public Map<String,String> getHeaders(){
+
+                //    @Headers("User-Agent: java-ipapi-client")
+                Map<String, String> headers = new HashMap<String, String>();
+                headers.put("User-agent", "java-ipapi-client");
+                return headers;
+            }
+        };
         mRequestQueue.add(gsonReq);
     }
 
